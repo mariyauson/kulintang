@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kulintang</title>
+        <meta charset = "utf-8" />
+        <meta name = "description" content = "An educational webpage on the Philippine traditional instrument Kulintang" />
+        <meta name = viewport content = "width = device-width, initial-scale = 1" />
+        <link rel = "stylesheet" href = "style.css" />
+        <script src = "main.js" ></script>
+
+    </head>
+    <body>
+
+
+        <h1> ※ 〜 ※ 〜 Kulintang 〜 ※ 〜 ※ </h1>
+        <br>
+        <div id="wrap">
+          <p> &emsp; The <i>kulintang</i> is a set of gongs laid out in a row and struck with sticks. The number of gongs may vary among regions and groups. This webpage focuses on the Maguindanaon kulintang. The gongs are arranged in ascending pitch order, with the lowest sounding gong on the leftmost reach of the player.</p> 
+          <p> &emsp; The kulintang can be played solo or with the <i>Palabunibunyan</i>, a musical ensemble consisting of other gongs played with mallets, sticks and/or by hand. Although the study of the instrument and repertoire is done by passing on oral and aural traditions, it can also be learned with numbered musical notation. The notation below is taken from page 31 of Aga Mayo Butocan's book <i>"Palabunibunyan: A Repertoire of Musical Pieces for the Maguindanaon Kulintang"</i>. </p>
+          <h2>How to Play</h2>
+          <img src = "Kulintang notation.jpg" height="1000"/>
+
+          <br>
+
+          <div id="line-breakk"><span class = "line-break" alt="line break">※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ </span></div>
+
+          <h2>Excerpts</h2>
+          <p> Below are excerpts from pieces and how they might sound like when played. There is no standard tuning for the kulintang; different sets may have differing scales or [sound] intervals.</p>
+
+          <h3>&emsp;Binalig</h3>
+          <img class="excerpt" src = "binalig_pic.png" alt = "binalig excerpt photo" height = "90" width = "820"/>
+          <audio class="audio_excerpt" controls autoplay>
+            <source src="binalig_mp3.mp3" type="audio/mpeg">
+          </audio> 
+
+          <h3>&emsp;Tidtu</h3>
+          <img class="excerpt" src = "tidtu_pic.png" alt = "tidtu excerpt photo" height = "90" width = "820"/>
+          <audio class="audio_excerpt" controls autoplay>
+            <source src="tidtu_mp3.mp3" type="audio/mpeg">
+          </audio> 
+          
+          <h3>&emsp;Sinulog a Minuna</h3>
+          <img class="excerpt" src = "sinulog_pic.png" alt = "sinulog excerpt photo" height = "90" width = "820"/>
+          <audio class="audio_excerpt" controls autoplay>
+            <source src="sinulog_mp3.mp3" type="audio/mpeg">
+          </audio> 
+          
+          <br>
+          <span class = "line-break" alt="line break">※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ 〜 ※ </span>
+          <p> Give reading a try! Press numbers 1 to 8 on your keyboard.</p>
+          
+          <div class="keys">
+              <div data-key="49" class="gong">
+                <kbd>1</kbd>
+              </div>
+
+              <div data-key="50" class="gong">
+                <kbd>2</kbd>
+              </div>
+
+              <div data-key="51" class="gong">
+                <kbd>3</kbd>
+              </div>
+
+              <div data-key="52" class="gong">
+                <kbd>4</kbd>
+              </div>
+
+              <div data-key="53" class="gong">
+                <kbd>5</kbd>
+              </div>
+
+              <div data-key="54" class="gong">
+                <kbd>6</kbd>
+              </div>
+
+              <div data-key="55" class="gong">
+                <kbd>7</kbd>
+              </div>
+
+              <div data-key="56" class="gong">
+                <kbd>8</kbd>
+              </div>
+
+            </div> <!-- end .keys -->
+          
+            <audio data-key="49" src="g1.wav"></audio>
+            <audio data-key="50" src="g2.wav"></audio>
+            <audio data-key="51" src="g3.wav"></audio>
+            <audio data-key="52" src="g4.wav"></audio>
+            <audio data-key="53" src="g5.wav"></audio>
+            <audio data-key="54" src="g6.wav"></audio>
+            <audio data-key="55" src="g7.wav"></audio>
+            <audio data-key="56" src="g8.wav"></audio>
+          
+          
+          <script>
+          
+            function removeTransition(e) {
+              if (e.propertyName !== 'transform') return;
+              e.target.classList.remove('playing');
+            }
+          
+            function play_sound(e) {
+              const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+              const key = document.querySelector(`div[data-key="${Number(e.keyCode)}"]`);
+              if (audio == false) return e;
+          
+              key.classList.add('playing');
+              audio.currentTime = 0;
+              audio.play();
+            }
+          
+            const gongs = Array.from(document.querySelectorAll('.gong'));
+            gongs.forEach(key => key.addEventListener('transitionend', removeTransition));
+            window.addEventListener('keydown', play_sound);
+          </script>
+        </div> <!--end wrap-->
+        
+        </body>
+        <hr>
+        <footer>
+          <p class="footer-p">2021 <a id="footer-a" href =mailto:mariyauson+pproj_kulintang@pm.me>mariyauson@pm.me</a></p>
+        </footer>
+        </html>

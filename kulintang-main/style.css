@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(218, 218, 218);
+    padding: 60px 130px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif   
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.9rem;
+}
+
+#wrap {
+    padding: 0px 40px;
+}
+
+.line-break, h1, .keys {
+    white-space: nowrap;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.15rem;
+}
+
+img {
+    display: block;
+    margin: auto;
+    border-radius: 4px;
+}
+
+.kulintang-set {
+    border: solid brown;
+}
+
+.line-break {
+    text-align: center;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+
+
+.gong {
+    border: solid rgb(138, 136, 117);
+    border-radius: 50%;
+    background-color: goldenrod;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    transition: all 0.1s ease-out;
+    text-align: center;
+    font-size: 18px;
+    color:rgb(53, 53, 53)
+}
+
+.gong.active {
+    background-color: white;
+}
+
+.playing {
+    border-color: black;
+
+    transform: scale(1.1);
+}
+
+hr {
+margin: 120px -120px 0px -120px;
+color: rgb(185, 185, 185);
+}
+
+footer p {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px 0px -52px 0px;
+    font-size: 12px;
+    color: rgb(107, 107, 107);
+    text-align: center;
+}
+
+#footer-a {
+    color: gray;
+    text-decoration: none;
+}
+
+#footer-a:hover {
+    text-decoration: underline;
+}
+
+.excerpt {
+    margin-left: 40px;
+}
+
+.audio_excerpt {
+    margin-left: 41px;
+    height: 30px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
